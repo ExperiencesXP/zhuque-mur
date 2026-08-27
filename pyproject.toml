@@ -1,0 +1,41 @@
+[project]
+name = "zhuque-mur"
+version = "1.0.0"
+description = "Legal clean-room reimplementation CLI with isolated AI agents"
+readme = "README.md"
+requires-python = ">=3.12,<4"
+authors = [
+    { name = "Experiences" },
+]
+dependencies = [
+    "textual",
+    "art",
+    "python-dotenv",
+    "requests",
+    "openai",
+]
+
+[project.scripts]
+zhuque = "zhuque_mur.__main__:main"
+zhuque-mur = "zhuque_mur.__main__:main"
+zhu-mur = "zhuque_mur.__main__:main"
+zhu = "zhuque_mur.__main__:main"
+
+[tool.poetry]
+packages = [
+    { include = "api", from = "src" },
+    { include = "commands", from = "src" },
+    { include = "constants", from = "src" },
+    { include = "controllers", from = "src" },
+    { include = "prompts", from = "src" },
+    { include = "utils", from = "src" },
+    { include = "views", from = "src" },
+    { include = "zhuque_mur", from = "src" },
+]
+include = [
+    { path = "src/prompts/*.md", format = ["sdist", "wheel"] },
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"

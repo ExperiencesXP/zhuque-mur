@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "tmp-echo-check",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"echo TASK_OK"
+			],
+			"isBackground": false
+		}
+	]
+}

@@ -1,0 +1,2 @@
+DEFAULT_MODEL = "grok-4.6"
+DEFAULT_MODEL_PROVIDER = "xai"
